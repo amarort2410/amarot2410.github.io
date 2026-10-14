@@ -1,0 +1,215 @@
+/* Estilos generales */
+
+* {
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    margin: 0;
+
+    background-color: #f4f6f9;
+
+    color: #333;
+
+    line-height: 1.6;
+
+}
+
+/* Cabecera */
+
+header {
+
+    background-color: #25eb50;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 35px 20px;
+
+}
+
+header h1 {
+
+    margin: 0;
+
+    font-size: 36px;
+
+}
+
+/* Menú de navegación */
+
+nav {
+
+    background-color: #e92bc9;
+
+    text-align: center;
+
+    padding: 15px;
+
+}
+
+nav a {
+
+    color: rgb(255, 255, 255);
+
+    text-decoration: none;
+
+    margin: 0 15px;
+
+    font-weight: bold;
+
+}
+
+nav a:hover {
+
+    color: #97fd93;
+
+}
+
+/* Contenido principal */
+
+main {
+
+    max-width: 1000px;
+
+    margin: 30px auto;
+
+    padding: 20px;
+
+}
+
+section {
+
+    margin-bottom: 40px;
+
+}
+
+h2 {
+
+    color: #25eb3f;
+
+}
+
+/* Presentación */
+
+.presentacion {
+
+    background-color: white;
+
+    text-align: center;
+
+    padding: 40px 20px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+
+}
+
+/* Botón */
+
+button {
+
+    background-color: #25eb35;
+
+    color: white;
+
+    border: none;
+
+    padding: 12px 25px;
+
+    border-radius: 6px;
+
+    cursor: pointer;
+
+    font-size: 16px;
+
+}
+
+button:hover {
+
+    background-color: #1dd84c;
+
+}
+
+/* Tarjetas */
+
+.tarjetas {
+
+    display: flex;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+
+}
+
+.tarjeta {
+
+    flex: 1;
+
+    min-width: 200px;
+
+    background-color: rgb(255, 255, 255);
+
+    padding: 20px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s;
+
+}
+
+.tarjeta:hover {
+
+    transform: translateY(-5px);
+
+}
+
+/* Pie de página */
+
+footer {
+
+    background-color: #db26db;
+
+    color: rgb(255, 255, 255);
+
+    text-align: center;
+
+    padding: 20px;
+
+}
+
+/* Adaptación a móviles */
+
+@media (max-width: 600px) {
+
+    header h1 {
+
+        font-size: 28px;
+
+    }
+
+    nav a {
+
+        display: inline-block;
+
+        margin: 5px 8px;
+
+    }
+
+    .tarjetas {
+
+        flex-direction: column;
+
+    }
+
+}
