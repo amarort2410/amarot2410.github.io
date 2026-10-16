@@ -12,9 +12,9 @@ body {
 
     margin: 0;
 
-    background-color: #f4f6f9;
+    background-color: #79ec79;
 
-    color: #333;
+    color: #305a34;
 
     line-height: 1.6;
 
@@ -24,9 +24,9 @@ body {
 
 header {
 
-    background-color: #25eb50;
+    background-color: #25eb25;
 
-    color: white;
+    color: rgb(233, 226, 226);
 
     text-align: center;
 
@@ -38,7 +38,7 @@ header h1 {
 
     margin: 0;
 
-    font-size: 36px;
+    font-size: 50px;
 
 }
 
@@ -46,7 +46,7 @@ header h1 {
 
 nav {
 
-    background-color: #e92bc9;
+    background-color: #e5ebe5;
 
     text-align: center;
 
@@ -56,7 +56,7 @@ nav {
 
 nav a {
 
-    color: rgb(255, 255, 255);
+    color: rgb(62, 218, 23);
 
     text-decoration: none;
 
@@ -68,7 +68,7 @@ nav a {
 
 nav a:hover {
 
-    color: #97fd93;
+    color: #ffffff;
 
 }
 
@@ -92,7 +92,7 @@ section {
 
 h2 {
 
-    color: #25eb3f;
+    color: #edf7ec;
 
 }
 
@@ -100,15 +100,15 @@ h2 {
 
 .presentacion {
 
-    background-color: white;
+    background-color: rgb(255, 255, 255);
 
     text-align: center;
 
-    padding: 40px 20px;
+    padding: 50px 20px;
 
-    border-radius: 12px;
+    border-radius: 35px;
 
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgb(255, 255, 255);
 
 }
 
@@ -116,15 +116,15 @@ h2 {
 
 button {
 
-    background-color: #25eb35;
+    background-color: #262b25;
 
-    color: white;
+    color: rgb(8, 6, 6);
 
     border: none;
 
-    padding: 12px 25px;
+    padding: 12px 30px;
 
-    border-radius: 6px;
+    border-radius: 12px;
 
     cursor: pointer;
 
@@ -134,7 +134,7 @@ button {
 
 button:hover {
 
-    background-color: #1dd84c;
+    background-color: #fffefe;
 
 }
 
@@ -156,13 +156,13 @@ button:hover {
 
     min-width: 200px;
 
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(248, 244, 244);
 
-    padding: 20px;
+    padding: 50px;
 
     border-radius: 10px;
 
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 3px 8px rgb(0, 255, 0);
 
     transition: transform 0.3s;
 
@@ -178,9 +178,9 @@ button:hover {
 
 footer {
 
-    background-color: #db26db;
+    background-color: #05ee21;
 
-    color: rgb(255, 255, 255);
+    color: rgb(245, 243, 243);
 
     text-align: center;
 
@@ -190,7 +190,7 @@ footer {
 
 /* Adaptación a móviles */
 
-@media (max-width: 600px) {
+@media (max-width: 400px) {
 
     header h1 {
 
@@ -208,7 +208,7 @@ footer {
 
     .tarjetas {
 
-        flex-direction: column;
+        flex-direction: row-reverse;
 
     }
 
