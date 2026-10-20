@@ -1,28 +1,311 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="description" content="Vortex Games, estudio independiente de videojuegos. Creamos mundos que van más allá del juego.">
-<title>VORTEX GAMES — Beyond the Game</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<style>
-:root{--bg:#07080e;--panel:#111320;--muted:#a6abc1;--white:#f6f7ff;--purple:#a855f7;--blue:#4f79ff;--line:rgba(255,255,255,.12)}*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--white);font-family:Inter,Arial,sans-serif}a{color:inherit;text-decoration:none}button,input,textarea{font:inherit}button{cursor:pointer}::selection{background:var(--purple);color:white}.container{width:min(1180px,90%);margin:auto}.topbar{position:fixed;top:0;left:0;width:100%;z-index:20;background:rgba(7,8,14,.78);backdrop-filter:blur(20px);border-bottom:1px solid var(--line)}.nav{height:78px;display:flex;align-items:center;justify-content:space-between}.brand{display:flex;align-items:center;gap:11px;font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:26px;letter-spacing:2px}.brand-mark{display:grid;place-items:center;width:39px;height:39px;border:2px solid var(--purple);transform:skew(-10deg);font-size:30px;line-height:1;color:white;text-shadow:0 0 18px var(--purple)}.brand span span{color:var(--purple)}.links{display:flex;align-items:center;gap:29px}.links a{font-size:13px;font-weight:700;color:#c5c6d2;transition:.2s}.links a:hover{color:white}.nav-cta{border:1px solid #9860ee;padding:12px 18px;border-radius:6px!important;color:white!important}.menu{display:none;background:none;border:0;color:white;font-size:26px}.hero{min-height:770px;height:100svh;max-height:1000px;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(ellipse at 75% 45%,rgba(100,37,192,.25),transparent 50%),radial-gradient(ellipse at 15% 85%,rgba(48,65,183,.16),transparent 45%),#080911}.hero:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#080911 8%,rgba(8,9,17,.9) 38%,rgba(8,9,17,.25) 100%),url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1800&q=85') center/cover;opacity:.65}.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,#07080e,transparent 30%),repeating-linear-gradient(90deg,transparent 0,transparent 119px,rgba(255,255,255,.018) 120px);pointer-events:none}.hero .container{position:relative;z-index:2;padding-top:70px}.eyebrow{color:#c18aff;font-size:12px;font-weight:800;letter-spacing:3px;text-transform:uppercase;display:flex;gap:12px;align-items:center}.eyebrow:before{content:"";display:block;width:30px;height:2px;background:var(--purple)}h1,h2,h3,p{margin-top:0}h1,h2,h3{font-family:'Barlow Condensed',sans-serif;text-transform:uppercase}h1{font-size:clamp(80px,13vw,170px);letter-spacing:-3px;line-height:.76;margin:36px 0 30px;font-weight:900}h1 span{color:transparent;-webkit-text-stroke:2px #a869ff;text-shadow:0 0 80px rgba(168,85,247,.3)}.hero-sub{font-family:'Barlow Condensed',sans-serif;font-size:clamp(24px,3vw,37px);font-weight:600;letter-spacing:6px;margin:0 0 22px}.hero-desc{color:#b5b8ca;max-width:490px;line-height:1.8;font-size:15px;margin-bottom:35px}.actions{display:flex;gap:13px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;padding:16px 25px;border-radius:5px;font-size:13px;font-weight:800;letter-spacing:.4px;transition:transform .2s,background .2s;border:1px solid transparent}.btn:hover{transform:translateY(-3px)}.btn-primary{background:linear-gradient(110deg,#a348f5,#6545ef);color:white;box-shadow:0 12px 35px rgba(139,69,245,.25)}.btn-outline{border-color:rgba(255,255,255,.35);background:rgba(255,255,255,.04);color:white}.hero-bottom{position:absolute;bottom:40px;z-index:3;left:5%;right:5%;display:flex;justify-content:space-between;color:#8d91a8;font-size:11px;letter-spacing:2px}.scroll-line{height:40px;width:1px;background:linear-gradient(white,transparent);display:inline-block;vertical-align:middle;margin-left:12px}section{padding:112px 0}.section-heading{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:48px}.section-heading h2{font-size:clamp(49px,6vw,80px);line-height:.92;margin:16px 0 0}.section-heading h2 em{font-style:normal;color:var(--purple)}.section-heading p{color:var(--muted);line-height:1.8;max-width:390px;font-size:14px}.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:25px}.about-visual{min-height:415px;border:1px solid var(--line);border-radius:12px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 50%,rgba(153,75,243,.24),transparent 47%),linear-gradient(140deg,#1a1b33,#080910)}.about-visual:before{content:"V";position:absolute;font-family:'Barlow Condensed',sans-serif;font-size:390px;font-weight:900;line-height:1;color:transparent;-webkit-text-stroke:2px rgba(190,120,255,.65);left:50%;top:45%;transform:translate(-50%,-50%) skew(-9deg);filter:drop-shadow(0 0 40px #8636de)}.about-visual .visual-label{position:absolute;bottom:24px;left:25px;font-size:11px;letter-spacing:3px;color:#cbb3f7}.about-copy{padding:38px;background:#11121c;border:1px solid var(--line);border-radius:12px}.about-copy h3{font-size:38px;line-height:1.05;margin-bottom:20px}.about-copy p{font-size:14px;line-height:1.95;color:var(--muted)}.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:35px}.stat{border-top:1px solid #5e4087;padding-top:18px}.stat strong{font-family:'Barlow Condensed',sans-serif;font-size:36px;display:block}.stat small{color:var(--muted);font-size:11px}.games{background:#0c0d16}.game-card{border:1px solid var(--line);border-radius:13px;overflow:hidden;display:grid;grid-template-columns:1.2fr .8fr;min-height:480px;background:#141321}.game-art{position:relative;min-height:420px;background:linear-gradient(0deg,rgba(7,8,14,.55),transparent 50%),linear-gradient(100deg,rgba(7,8,14,.15),rgba(7,8,14,.15)),url('https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=1300&q=85') center/cover}.game-art:after{content:'VORTEX CITY';font-family:'Barlow Condensed',sans-serif;font-weight:900;font-size:clamp(55px,7vw,100px);line-height:.78;position:absolute;bottom:32px;left:32px;max-width:400px;text-shadow:0 5px 30px #000}.game-copy{padding:55px 42px;display:flex;flex-direction:column;justify-content:center}.tag{display:inline-block;width:max-content;background:rgba(168,85,247,.15);border:1px solid rgba(168,85,247,.5);color:#d8b3ff;font-size:10px;letter-spacing:2px;padding:9px 12px;border-radius:3px;font-weight:800}.game-copy h3{font-size:52px;line-height:.95;margin:23px 0}.game-copy p{color:var(--muted);font-size:14px;line-height:1.85}.chips{display:flex;gap:8px;flex-wrap:wrap;margin:16px 0 28px}.chip{border:1px solid var(--line);padding:8px 12px;border-radius:4px;color:#c6c8d4;font-size:11px}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}.feature{padding:32px;border:1px solid var(--line);background:#10111b;border-radius:9px;transition:.25s}.feature:hover{transform:translateY(-5px);border-color:rgba(168,85,247,.5)}.feature .symbol{font-size:32px;margin-bottom:22px}.feature h3{font-size:28px;margin-bottom:12px}.feature p{color:var(--muted);font-size:13px;line-height:1.8;margin:0}.team{background:linear-gradient(145deg,#101020,#080910)}.team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.team-card{padding:30px 25px;border:1px solid var(--line);border-radius:9px;background:rgba(255,255,255,.025)}.team-card .number{font-family:'Barlow Condensed',sans-serif;color:#a76af6;font-size:50px;font-weight:800}.team-card h3{font-size:25px;margin:10px 0}.team-card p{font-size:12px;line-height:1.7;color:var(--muted);margin:0}.banner{padding:65px 0;background:linear-gradient(110deg,#5021a2,#25226e);text-align:center}.banner h2{font-size:clamp(48px,7vw,90px);margin:0 0 12px}.banner p{color:#e4d7fa;margin:0}.contact-grid{display:grid;grid-template-columns:1fr 1fr;gap:55px}.contact h2{font-size:65px;line-height:.95;margin:20px 0}.contact p{color:var(--muted);line-height:1.9;font-size:14px}.contact-info{margin-top:35px;display:grid;gap:18px;color:#d1c6e5;font-size:14px}.contact-info b{color:white}.form{display:grid;gap:15px}.form input,.form textarea{width:100%;padding:17px 18px;background:#12131e;border:1px solid var(--line);border-radius:6px;color:white;outline:none}.form input:focus,.form textarea:focus{border-color:#a855f7}.form textarea{min-height:140px;resize:vertical}.form-note{font-size:12px;color:#a6abc1;line-height:1.6}.notice{display:none;color:#cfb1ff;font-size:13px}.footer{padding:35px 0;border-top:1px solid var(--line)}.footer .container{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer small{font-size:11px;color:#8b8da4}.footer-links{display:flex;gap:18px;font-size:12px;color:#b5b6c7}.reveal{opacity:0;transform:translateY(24px);transition:opacity .7s,transform .7s}.reveal.visible{opacity:1;transform:none}@media(max-width:850px){.links{display:none;position:absolute;top:78px;left:0;right:0;background:#10101c;padding:25px 5%;flex-direction:column;align-items:stretch;border-bottom:1px solid var(--line)}.links.open{display:flex}.menu{display:block}.hero{min-height:680px}.about-grid,.game-card,.contact-grid{grid-template-columns:1fr}.game-art{min-height:390px}.features{grid-template-columns:1fr 1fr}.team-grid{grid-template-columns:1fr 1fr}.section-heading{display:block}.section-heading p{margin-top:20px}}@media(max-width:560px){section{padding:75px 0}.hero{min-height:680px;height:auto;padding:110px 0 100px}.hero:before{background:linear-gradient(90deg,rgba(8,9,17,.88),rgba(8,9,17,.55)),url('https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1000&q=80') center/cover}.hero-sub{letter-spacing:3px}.hero-bottom{bottom:25px}.about-visual{min-height:280px}.about-visual:before{font-size:280px}.about-copy{padding:25px}.game-copy{padding:34px 25px}.game-copy h3{font-size:43px}.features,.team-grid{grid-template-columns:1fr}.stats{gap:7px}.stat strong{font-size:29px}.footer .container{flex-direction:column;align-items:start}}
-</style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex Games | Vortex City</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
-<header class="topbar"><div class="container nav"><a class="brand" href="#inicio" aria-label="Vortex Games, inicio"><span class="brand-mark">V</span><span>VORTEX <span>GAMES</span></span></a><button class="menu" aria-label="Abrir menú" aria-expanded="false">☰</button><nav class="links" id="navlinks"><a href="#inicio">INICIO</a><a href="#nosotros">NOSOTROS</a><a href="#juegos">VIDEOJUEGOS</a><a href="#servicios">QUÉ HACEMOS</a><a href="#equipo">EQUIPO</a><a class="nav-cta" href="#contacto">CONTACTO ↗</a></nav></div></header>
-<main><section class="hero" id="inicio"><div class="container"><div class="eyebrow">ESTUDIO INDEPENDIENTE DE VIDEOJUEGOS</div><h1>VORTEX<br><span>GAMES.</span></h1><p class="hero-sub">BEYOND THE GAME</p><p class="hero-desc">No solo creamos videojuegos. Construimos mundos, contamos historias y diseñamos experiencias que van más allá de la pantalla.</p><div class="actions"><a href="#juegos" class="btn btn-primary">DESCUBRE NUESTRO JUEGO <span>↗</span></a><a href="#nosotros" class="btn btn-outline">CONOCE VORTEX →</a></div></div><div class="hero-bottom"><span>IMAGINA · CREA · JUEGA</span><span>DESLIZA PARA EXPLORAR <span class="scroll-line"></span></span></div></section>
-<section id="nosotros"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">01 / NUESTRA IDENTIDAD</div><h2>UN NUEVO<br><em>UNIVERSO.</em></h2></div><p>Somos un estudio de videojuegos ficticio nacido de una idea: crear aventuras originales que hagan sentir a cada jugador protagonista de su propia historia.</p></div><div class="about-grid"><div class="about-visual reveal"><span class="visual-label">VORTEX GAMES / ESTUDIO CREATIVO</span></div><div class="about-copy reveal"><h3>HECHOS PARA<br>IR MÁS ALLÁ.</h3><p>Vortex Games es una empresa española de desarrollo de videojuegos inspirada en los grandes estudios del sector. Nuestra especialidad son los juegos de acción, aventura y mundo abierto.</p><p>Combinamos programación, diseño, narrativa y tecnología para crear personajes inolvidables, ciudades vivas y experiencias llenas de posibilidades.</p><div class="stats"><div class="stat"><strong>20</strong><small>PROFESIONALES PREVISTOS</small></div><div class="stat"><strong>01</strong><small>PRIMER PROYECTO</small></div><div class="stat"><strong>∞</strong><small>IDEAS POR EXPLORAR</small></div></div></div></div></div></section>
-<section class="games" id="juegos"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">02 / NUESTROS JUEGOS</div><h2>EL MUNDO ES<br><em>TUYO.</em></h2></div><p>Conoce el concepto de nuestro primer videojuego: una aventura urbana de mundo abierto donde cada decisión importa.</p></div><div class="game-card reveal"><div class="game-art" role="img" aria-label="Ciudad iluminada de noche, imagen conceptual de Vortex City"></div><div class="game-copy"><span class="tag">EN DESARROLLO · CONCEPTO</span><h3>UNA CIUDAD.<br>MIL HISTORIAS.</h3><p>Explora una metrópolis ficticia repleta de secretos, personajes y oportunidades. Recorre sus calles, completa misiones y descubre hasta dónde puedes llegar.</p><div class="chips"><span class="chip">MUNDO ABIERTO</span><span class="chip">ACCIÓN Y AVENTURA</span><span class="chip">PC Y CONSOLAS</span></div><a class="btn btn-primary" href="#contacto">SIGUE EL PROYECTO →</a></div></div></div></section>
-<section id="servicios"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">03 / LO QUE HACEMOS</div><h2>CREAMOS LO<br><em>IMPOSIBLE.</em></h2></div><p>Cada gran videojuego nace de la colaboración entre artistas, programadores y personas con ganas de contar historias.</p></div><div class="features"><article class="feature reveal"><div class="symbol">🎮</div><h3>DESARROLLO</h3><p>Diseñamos mecánicas, sistemas y experiencias de juego para PC y consolas.</p></article><article class="feature reveal"><div class="symbol">🌆</div><h3>MUNDOS ABIERTOS</h3><p>Imaginamos ciudades y escenarios con lugares que explorar y descubrir.</p></article><article class="feature reveal"><div class="symbol">🎬</div><h3>HISTORIAS</h3><p>Creamos personajes, misiones y narrativas que conectan con los jugadores.</p></article><article class="feature reveal"><div class="symbol">🧩</div><h3>DISEÑO 3D</h3><p>Construimos personajes, vehículos y escenarios con una identidad visual propia.</p></article><article class="feature reveal"><div class="symbol">🔊</div><h3>SONIDO</h3><p>Trabajamos música y efectos para dar personalidad a cada mundo.</p></article><article class="feature reveal"><div class="symbol">⚡</div><h3>INNOVACIÓN</h3><p>Buscamos ideas originales y nuevas maneras de disfrutar de los videojuegos.</p></article></div></div></section>
-<section class="team" id="equipo"><div class="container"><div class="section-heading reveal"><div><div class="eyebrow">04 / NUESTRO EQUIPO</div><h2>EL TALENTO<br><em>NOS MUEVE.</em></h2></div><p>Un equipo creativo de 20 profesionales previstos, organizado para convertir una idea en un videojuego completo.</p></div><div class="team-grid"><div class="team-card reveal"><div class="number">06</div><h3>PROGRAMACIÓN</h3><p>El equipo que da vida al funcionamiento de cada juego.</p></div><div class="team-card reveal"><div class="number">05</div><h3>DISEÑO Y ARTE</h3><p>Personajes, escenarios, animaciones y dirección artística.</p></div><div class="team-card reveal"><div class="number">02</div><h3>GUIONISTAS</h3><p>Historias, misiones, diálogos y creación de personajes.</p></div><div class="team-card reveal"><div class="number">07</div><h3>OTRAS ÁREAS</h3><p>Dirección, sonido, pruebas, marketing y administración.</p></div></div></div></section>
-<div class="banner"><div class="container"><h2>MORE THAN JUST A GAME.</h2><p>EL FUTURO SE IMAGINA. NOSOTROS LO CREAMOS.</p></div></div>
-<section class="contact" id="contacto"><div class="container contact-grid"><div class="reveal"><div class="eyebrow">05 / HABLEMOS</div><h2>¿LISTO PARA<br>EL SIGUIENTE<br><span style="color:#ae68ff">NIVEL?</span></h2><p>¿Quieres saber más sobre Vortex Games y sus proyectos? Este es el espacio de contacto de nuestra empresa ficticia.</p><div class="contact-info"><div>📍 <b>Sede propuesta:</b> Madrid, España</div><div>🎮 <b>Proyecto principal:</b> Vortex City</div><div>🚀 <b>Sector:</b> Desarrollo de videojuegos</div></div></div><form class="form reveal" id="contact-form"><input name="nombre" aria-label="Tu nombre" placeholder="Tu nombre" required maxlength="80"><input type="email" name="email" aria-label="Tu correo electrónico" placeholder="Tu correo electrónico" required><textarea name="mensaje" aria-label="Tu mensaje" placeholder="Escribe tu mensaje..." required maxlength="2000"></textarea><button class="btn btn-primary" type="submit">PREPARAR MENSAJE ↗</button><span class="notice" id="notice" role="status"></span><p class="form-note">Esta web es una demostración para un proyecto educativo. El formulario no envía información a ningún servidor; permite preparar el mensaje para copiarlo.</p></form></div></section></main>
-<footer class="footer"><div class="container"><a class="brand" href="#inicio"><span class="brand-mark">V</span><span>VORTEX <span>GAMES</span></span></a><small>© 2026 VORTEX GAMES · PROYECTO EDUCATIVO FICTICIO</small><div class="footer-links"><a href="#nosotros">NOSOTROS</a><a href="#juegos">JUEGOS</a><a href="#contacto">CONTACTO</a></div></div></footer>
-<script>
-const menu=document.querySelector('.menu'),links=document.querySelector('.links');menu.addEventListener('click',()=>{const open=links.classList.toggle('open');menu.setAttribute('aria-expanded',String(open));menu.textContent=open?'✕':'☰'});document.querySelectorAll('.links a').forEach(a=>a.addEventListener('click',()=>{links.classList.remove('open');menu.setAttribute('aria-expanded','false');menu.textContent='☰'}));
-const observer=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');observer.unobserve(e.target)}}),{threshold:.08});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
-document.querySelector('#contact-form').addEventListener('submit',async e=>{e.preventDefault();const f=e.currentTarget;const message=`Contacto Vortex Games\nNombre: ${f.nombre.value}\nCorreo: ${f.email.value}\nMensaje: ${f.mensaje.value}`;const notice=document.querySelector('#notice');try{await navigator.clipboard.writeText(message);notice.textContent='✓ Mensaje copiado al portapapeles. No se ha enviado.'}catch{notice.textContent='El mensaje no se ha enviado. Selecciona el texto del formulario para copiarlo.'}notice.style.display='block'});
-</script>
-</body></html>
+
+<div class="aviso">
+  PROYECTO DEMOSTRATIVO · RESERVAS SIMULADAS
+</div>
+
+<header>
+  <a href="#inicio" class="logo">VORTEX <span>GAMES</span></a>
+  <button id="menuBtn" class="menu-btn">☰</button>
+  <nav id="menu">
+    <a href="#inicio">Inicio</a>
+    <a href="#juego">El juego</a>
+    <a href="#mundo">Mapa</a>
+    <a href="#actividades">Actividades</a>
+    <a href="#personajes">Personajes</a>
+    <a href="#ediciones">Ediciones</a>
+    <a href="#reserva">Reservar</a>
+  </nav>
+  <button id="abrirCarrito" class="boton">🛒 <span id="contador">0</span></button>
+</header>
+
+<main>
+  <section id="inicio" class="hero">
+    <div class="contenedor">
+      <p class="etiqueta">EL MUNDO ABIERTO EVOLUCIONA</p>
+      <h1>VORTEX<br><span>CITY</span></h1>
+      <p>Tu ciudad. Tu historia. Tus decisiones.</p>
+      <p>Explora un mundo donde cada acción puede cambiar tu destino.</p>
+      <a class="boton" href="#juego">DESCUBRE EL JUEGO →</a>
+      <a class="boton secundario" href="#ediciones">VER EDICIONES</a>
+      <p class="detalle">PC · PLAYSTATION · XBOX · PRÓXIMAMENTE</p>
+    </div>
+  </section>
+
+  <section id="juego" class="seccion contenedor">
+    <p class="etiqueta">01 / NUESTRO VIDEOJUEGO</p>
+    <h2>NO ES SOLO UN JUEGO. <span>ES TU MUNDO.</span></h2>
+    <p>
+      Vortex City es un proyecto de videojuego de acción,
+      aventura y mundo abierto creado por Vortex Games.
+      Nuestro objetivo es competir con los grandes títulos
+      del género ofreciendo más libertad, más actividades
+      y una ciudad que evoluciona con el jugador.
+    </p>
+    <div class="cuadricula">
+      <article class="tarjeta">
+        <div class="emoji">🌆</div>
+        <h3>MUNDO GIGANTESCO</h3>
+        <p>Ciudades, playas, montañas, pueblos y zonas secretas.</p>
+      </article>
+      <article class="tarjeta">
+        <div class="emoji">🎭</div>
+        <h3>HISTORIA DINÁMICA</h3>
+        <p>Tus decisiones cambiarán las relaciones y misiones.</p>
+      </article>
+      <article class="tarjeta">
+        <div class="emoji">🚘</div>
+        <h3>VEHÍCULOS</h3>
+        <p>Personaliza coches y participa en competiciones.</p>
+      </article>
+      <article class="tarjeta">
+        <div class="emoji">🤝</div>
+        <h3>VORTEX ONLINE</h3>
+        <p>Eventos, clubes y aventuras cooperativas con amigos.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="mundo" class="seccion oscuro">
+    <div class="contenedor">
+      <p class="etiqueta">02 / EXPLORA</p>
+      <h2>DESCUBRE <span>VORTEX CITY</span></h2>
+      <p>Selecciona una región del mapa conceptual.</p>
+
+      <div class="mapa">
+        <button data-region="centro">🌆 Neon Core</button>
+        <button data-region="costa">🏖️ Costa Azul</button>
+        <button data-region="montana">⛰️ Los Altos</button>
+        <button data-region="puerto">🚢 Puerto Vortex</button>
+        <button data-region="desierto">🏜️ Desierto</button>
+        <button data-region="bosque">🌲 Bosque Norte</button>
+      </div>
+
+      <div class="tarjeta">
+        <h3 id="nombreRegion">NEON CORE</h3>
+        <p id="descripcionRegion">
+          El centro de la ciudad, lleno de rascacielos,
+          actividades y secretos.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section id="actividades" class="seccion contenedor">
+    <p class="etiqueta">03 / EXPERIENCIAS</p>
+    <h2>SIEMPRE HAY <span>ALGO QUE HACER.</span></h2>
+    <div class="cuadricula">
+      <article class="tarjeta">
+        <div class="emoji">🏎️</div>
+        <h3>CARRERAS</h3>
+        <p>Compite y mejora tus vehículos.</p>
+      </article>
+      <article class="tarjeta">
+        <div class="emoji">🏠</div>
+        <h3>PROPIEDADES</h3>
+        <p>Compra casas y personalízalas.</p>
+      </article>
+      <article class="tarjeta">
+        <div class="emoji">💼</div>
+        <h3>NEGOCIOS</h3>
+        <p>Crea empresas dentro del videojuego.</p>
+      </article>
+      <article class="tarjeta">
+        <div class="emoji">🏄</div>
+        <h3>DEPORTES</h3>
+        <p>Descubre actividades por toda la ciudad.</p>
+      </article>
+      <article class="tarjeta">
+        <div class="emoji">🕵️</div>
+        <h3>MISTERIOS</h3>
+        <p>Encuentra secretos y resuelve acertijos.</p>
+      </article>
+      <article class="tarjeta">
+        <div class="emoji">🌦️</div>
+        <h3>MUNDO DINÁMICO</h3>
+        <p>Clima, horarios y eventos cambiantes.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="personajes" class="seccion oscuro">
+    <div class="contenedor">
+      <p class="etiqueta">04 / LA HISTORIA</p>
+      <h2>TRES VIDAS. <span>UNA CIUDAD.</span></h2>
+      <div class="cuadricula">
+        <article class="tarjeta">
+          <div class="personaje">01</div>
+          <h3>ALEX VEGA</h3>
+          <p>Un conductor que busca comenzar una nueva vida.</p>
+        </article>
+        <article class="tarjeta">
+          <div class="personaje">02</div>
+          <h3>NORA CRUZ</h3>
+          <p>Especialista en tecnología e investigación.</p>
+        </article>
+        <article class="tarjeta">
+          <div class="personaje">03</div>
+          <h3>LEO RIVAS</h3>
+          <p>Un emprendedor que quiere conquistar la ciudad.</p>
+        </article>
+      </div>
+
+      <div class="tarjeta historia">
+        <h3>DECIDE TU HISTORIA</h3>
+        <p>Encuentras una mochila con información importante.</p>
+        <button class="boton opcion" data-opcion="devolver">Buscar al dueño</button>
+        <button class="boton opcion" data-opcion="investigar">Investigar</button>
+        <button class="boton opcion" data-opcion="ignorar">Seguir caminando</button>
+        <p id="resultadoHistoria">¿Qué harías?</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="ediciones" class="seccion contenedor">
+    <p class="etiqueta">05 / DISPONIBILIDAD</p>
+    <h2>ELIGE TU <span>EDICIÓN.</span></h2>
+    <p>Precios ficticios para nuestro proyecto educativo.</p>
+    <div class="cuadricula ediciones">
+      <article class="tarjeta">
+        <h3>STANDARD</h3>
+        <div class="precio">59,99 €</div>
+        <p>Juego base</p>
+        <p>Historia completa</p>
+        <p>Acceso al mundo abierto</p>
+        <button class="boton elegir" data-edicion="standard">SELECCIONAR</button>
+      </article>
+      <article class="tarjeta destacada">
+        <div class="etiqueta">MÁS POPULAR</div>
+        <h3>DELUXE</h3>
+        <div class="precio">79,99 €</div>
+        <p>Juego base</p>
+        <p>Contenido digital adicional conceptual</p>
+        <p>Vehículos y atuendos especiales propuestos</p>
+        <button class="boton elegir" data-edicion="deluxe">SELECCIONAR</button>
+      </article>
+      <article class="tarjeta">
+        <h3>ULTIMATE</h3>
+        <div class="precio">99,99 €</div>
+        <p>Contenido Deluxe</p>
+        <p>Extras digitales conceptuales</p>
+        <p>Personalización adicional propuesta</p>
+        <button class="boton elegir" data-edicion="ultimate">SELECCIONAR</button>
+      </article>
+    </div>
+  </section>
+
+  <section id="reserva" class="seccion oscuro">
+    <div class="contenedor">
+      <p class="etiqueta">06 / RESERVA DE DEMOSTRACIÓN</p>
+      <h2>PREPARA TU <span>RESERVA.</span></h2>
+      <form id="formReserva" class="tarjeta formulario">
+        <label for="edicion">Edición</label>
+        <select id="edicion">
+          <option value="standard">Standard — 59,99 €</option>
+          <option value="deluxe">Deluxe — 79,99 €</option>
+          <option value="ultimate">Ultimate — 99,99 €</option>
+        </select>
+
+        <label for="plataforma">Plataforma</label>
+        <select id="plataforma">
+          <option>PC</option>
+          <option>PlayStation</option>
+          <option>Xbox</option>
+        </select>
+
+        <label for="formato">Formato</label>
+        <select id="formato">
+          <option>Digital</option>
+          <option>Físico</option>
+        </select>
+
+        <label for="cantidad">Cantidad</label>
+        <input type="number" id="cantidad" value="1" min="1" max="5">
+
+        <div class="total">
+          <span>Precio total</span>
+          <strong id="precioTotal">59,99 €</strong>
+        </div>
+        <button class="boton" type="submit">AÑADIR AL CARRITO</button>
+        <p id="estadoReserva" role="status"></p>
+        <small>Simulación sin pagos ni pedidos reales.</small>
+      </form>
+    </div>
+  </section>
+
+  <section class="seccion contenedor">
+    <p class="etiqueta">07 / ACTUALIZACIONES</p>
+    <h2>ÚLTIMAS <span>NOVEDADES.</span></h2>
+    <div class="cuadricula">
+      <article class="tarjeta">
+        <h3>EL MAPA DE VORTEX CITY</h3>
+        <p>Descubre las seis regiones de nuestro mundo.</p>
+        <a href="#mundo">Explorar →</a>
+      </article>
+      <article class="tarjeta">
+        <h3>LOS PROTAGONISTAS</h3>
+        <p>Conoce a los personajes de la historia.</p>
+        <a href="#personajes">Descubrir →</a>
+      </article>
+      <article class="tarjeta">
+        <h3>LAS EDICIONES</h3>
+        <p>Consulta los precios de demostración.</p>
+        <a href="#ediciones">Ver precios →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="seccion oscuro">
+    <div class="contenedor">
+      <h2>PREGUNTAS <span>FRECUENTES.</span></h2>
+      <details>
+        <summary>¿Cuándo sale Vortex City?</summary>
+        <p>No hay una fecha de lanzamiento confirmada.</p>
+      </details>
+      <details>
+        <summary>¿Se puede reservar de verdad?</summary>
+        <p>No. Esta web es una demostración educativa.</p>
+      </details>
+      <details>
+        <summary>¿Qué plataformas tendrá?</summary>
+        <p>El proyecto contempla PC, PlayStation y Xbox.</p>
+      </details>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <h3>VORTEX GAMES</h3>
+  <p>BEYOND THE GAME</p>
+  <p>© 2026 Vortex Games · Proyecto ficticio.</p>
+  <a href="#inicio">VOLVER ARRIBA ↑</a>
+</footer>
+
+<dialog id="carrito">
+  <div class="cabecera-carrito">
+    <h2>🛒 TU CARRITO</h2>
+    <button id="cerrarCarrito">✕</button>
+  </div>
+  <div id="productosCarrito"></div>
+  <div class="total">
+    <span>Total</span>
+    <strong id="totalCarrito">0,00 €</strong>
+  </div>
+  <button id="vaciarCarrito" class="boton secundario">VACIAR</button>
+  <button id="confirmarReserva" class="boton">SIMULAR RESERVA</button>
+  <p id="mensajeCarrito" role="status"></p>
+  <small>No se realiza ningún pago real.</small>
+</dialog>
+
+</body>
+</html>
