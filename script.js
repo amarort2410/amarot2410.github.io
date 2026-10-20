@@ -1,4 +1,7 @@
 
+function saludar() {
+    alert("¡Bienvenido a Vortex City!");
+}
 const precios = {
   standard: 59.99,
   deluxe: 79.99,
