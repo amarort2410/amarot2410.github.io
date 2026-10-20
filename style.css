@@ -1,16 +1,4 @@
 
-
-body {
-    background-color: #080912;
-    color: white;
-    text-align: center;
-}
-
-h1 {
-    color: #ae69ff;
-}
-
-
 :root {
   --fondo: #080912;
   --panel: #151525;
@@ -19,9 +7,13 @@ h1 {
   --gris: #afb0c8;
 }
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   margin: 0;
@@ -30,9 +22,18 @@ body {
   font-family: Arial, sans-serif;
 }
 
-a { color: inherit; text-decoration: none; }
-button, input, select { font: inherit; }
-button { cursor: pointer; }
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select {
+  font: inherit;
+}
+
+button {
+  cursor: pointer;
+}
 
 .contenedor {
   width: min(1150px, 90%);
@@ -66,16 +67,24 @@ header {
   white-space: nowrap;
 }
 
-.logo span, h2 span { color: var(--morado); }
+.logo span,
+h2 span {
+  color: var(--morado);
+}
 
-nav { display: flex; gap: 16px; }
+nav {
+  display: flex;
+  gap: 16px;
+}
 
 nav a {
   font-size: 13px;
   font-weight: bold;
 }
 
-nav a:hover { color: var(--morado); }
+nav a:hover {
+  color: var(--morado);
+}
 
 .menu-btn {
   display: none;
@@ -87,7 +96,7 @@ nav a:hover { color: var(--morado); }
 
 .boton {
   display: inline-block;
-  background: linear-gradient(120deg,#ad50ef,#6545f1);
+  background: linear-gradient(120deg, #ad50ef, #6545f1);
   color: white;
   border: none;
   border-radius: 7px;
@@ -113,19 +122,21 @@ nav a:hover { color: var(--morado); }
   display: flex;
   align-items: center;
   background:
-    linear-gradient(90deg,#080912,#080912aa),
+    linear-gradient(90deg, #080912, #080912aa),
     url("https://images.unsplash.com/photo-1519608487953-e999c86e7455?auto=format&fit=crop&w=1600&q=85")
-    center/cover;
+    center / cover;
 }
 
 .hero h1 {
-  font-size: clamp(80px,13vw,170px);
+  font-size: clamp(80px, 13vw, 170px);
   line-height: .85;
   margin: 25px 0;
   letter-spacing: -5px;
 }
 
-.hero h1 span { color: var(--morado); }
+.hero h1 span {
+  color: var(--morado);
+}
 
 .hero p {
   max-width: 540px;
@@ -145,16 +156,22 @@ nav a:hover { color: var(--morado); }
   font-size: 12px;
 }
 
-.seccion { padding: 95px 0; }
+.seccion {
+  padding: 95px 0;
+}
 
-.oscuro { background: #0e101c; }
+.oscuro {
+  background: #0e101c;
+}
 
 h2 {
-  font-size: clamp(40px,5vw,65px);
+  font-size: clamp(40px, 5vw, 65px);
   line-height: 1.05;
 }
 
-h3 { font-size: 23px; }
+h3 {
+  font-size: 23px;
+}
 
 .seccion p {
   line-height: 1.8;
@@ -163,7 +180,7 @@ h3 { font-size: 23px; }
 
 .cuadricula {
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
   margin-top: 35px;
 }
@@ -175,21 +192,29 @@ h3 { font-size: 23px; }
   padding: 28px;
 }
 
-.tarjeta:hover { border-color: #ae69ff77; }
+.tarjeta:hover {
+  border-color: #ae69ff77;
+}
 
-.emoji { font-size: 35px; }
+.emoji {
+  font-size: 35px;
+}
 
 .mapa {
   min-height: 330px;
   padding: 35px;
   margin: 25px 0;
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
   align-items: center;
   gap: 20px;
   border-radius: 15px;
-  background:
-    radial-gradient(circle at center,#56328a,#14223d 60%,#090c19);
+  background: radial-gradient(
+    circle at center,
+    #56328a,
+    #14223d 60%,
+    #090c19
+  );
 }
 
 .mapa button {
@@ -207,7 +232,7 @@ h3 { font-size: 23px; }
 
 .personaje {
   height: 160px;
-  background: linear-gradient(130deg,#55308e,#101c39);
+  background: linear-gradient(130deg, #55308e, #101c39);
   border-radius: 10px;
   font-size: 80px;
   font-weight: bold;
@@ -217,7 +242,9 @@ h3 { font-size: 23px; }
   color: #ffffff55;
 }
 
-.historia { margin-top: 25px; }
+.historia {
+  margin-top: 25px;
+}
 
 #resultadoHistoria {
   padding: 15px;
@@ -230,7 +257,9 @@ h3 { font-size: 23px; }
   flex-direction: column;
 }
 
-.ediciones .boton { margin-top: auto; }
+.ediciones .boton {
+  margin-top: auto;
+}
 
 .destacada {
   border-color: var(--morado);
@@ -251,7 +280,9 @@ h3 { font-size: 23px; }
   gap: 12px;
 }
 
-.formulario label { font-weight: bold; }
+.formulario label {
+  font-weight: bold;
+}
 
 .formulario input,
 .formulario select {
@@ -283,7 +314,10 @@ details {
   border-radius: 10px;
 }
 
-summary { cursor: pointer; font-weight: bold; }
+summary {
+  cursor: pointer;
+  font-weight: bold;
+}
 
 footer {
   padding: 40px;
@@ -291,10 +325,12 @@ footer {
   background: #05060d;
 }
 
-footer p { color: var(--gris); }
+footer p {
+  color: var(--gris);
+}
 
 dialog {
-  width: min(550px,92%);
+  width: min(550px, 92%);
   max-height: 85vh;
   overflow: auto;
   border: 1px solid var(--morado);
@@ -304,7 +340,9 @@ dialog {
   color: white;
 }
 
-dialog::backdrop { background: #000b; }
+dialog::backdrop {
+  background: #000b;
+}
 
 .cabecera-carrito {
   display: flex;
@@ -324,22 +362,63 @@ dialog::backdrop { background: #000b; }
   padding: 15px 0;
 }
 
-.producto p { color: var(--gris); }
-
-@media(max-width:900px) {
-  header { flex-wrap: wrap; }
-  nav { order: 4; width: 100%; justify-content: center; }
-  .cuadricula { grid-template-columns: repeat(2,1fr); }
+.producto p {
+  color: var(--gris);
 }
 
-@media(max-width:650px) {
-  .menu-btn { display: block; margin-left: auto; }
-  nav { display: none; flex-direction: column; }
-  nav.abierto { display: flex; }
-  .logo { font-size: 16px; }
-  .hero { min-height: 580px; }
-  .hero h1 { letter-spacing: -3px; }
-  .seccion { padding: 65px 0; }
-  .cuadricula, .mapa { grid-template-columns: 1fr; }
-  .tarjeta { padding: 22px; }
+@media (max-width: 900px) {
+  header {
+    flex-wrap: wrap;
+  }
+
+  nav {
+    order: 4;
+    width: 100%;
+    justify-content: center;
+  }
+
+  .cuadricula {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .menu-btn {
+    display: block;
+    margin-left: auto;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+  }
+
+  nav.abierto {
+    display: flex;
+  }
+
+  .logo {
+    font-size: 16px;
+  }
+
+  .hero {
+    min-height: 580px;
+  }
+
+  .hero h1 {
+    letter-spacing: -3px;
+  }
+
+  .seccion {
+    padding: 65px 0;
+  }
+
+  .cuadricula,
+  .mapa {
+    grid-template-columns: 1fr;
+  }
+
+  .tarjeta {
+    padding: 22px;
+  }
 }
