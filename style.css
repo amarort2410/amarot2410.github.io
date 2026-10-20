@@ -1,4 +1,16 @@
 
+
+body {
+    background-color: #080912;
+    color: white;
+    text-align: center;
+}
+
+h1 {
+    color: #ae69ff;
+}
+
+
 :root {
   --fondo: #080912;
   --panel: #151525;
