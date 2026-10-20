@@ -1,7 +1,4 @@
 
-function saludar() {
-    alert("¡Bienvenido a Vortex City!");
-}
 const precios = {
   standard: 59.99,
   deluxe: 79.99,
@@ -14,15 +11,14 @@ const nombres = {
   ultimate: "Ultimate"
 };
 
+const euros = valor => valor.toLocaleString("es-ES", {
+  style: "currency",
+  currency: "EUR"
+});
+
 let carrito = [];
 
-const euros = valor =>
-  valor.toLocaleString("es-ES", {
-    style: "currency",
-    currency: "EUR"
-  });
-
-// MENÚ PARA MÓVILES
+// MENÚ MÓVIL
 
 const menu = document.getElementById("menu");
 
@@ -83,7 +79,7 @@ document.querySelectorAll("[data-region]").forEach(boton => {
   });
 });
 
-// HISTORIA INTERACTIVA
+// DECISIONES DE LA HISTORIA
 
 const resultados = {
   devolver: "Encuentras al propietario. Has ganado un nuevo aliado en la ciudad.",
@@ -100,10 +96,12 @@ document.querySelectorAll(".opcion").forEach(boton => {
 
 // SELECCIÓN DE EDICIONES
 
+const edicion = document.getElementById("edicion");
+const cantidad = document.getElementById("cantidad");
+
 document.querySelectorAll(".elegir").forEach(boton => {
   boton.addEventListener("click", () => {
-    document.getElementById("edicion").value =
-      boton.dataset.edicion;
+    edicion.value = boton.dataset.edicion;
 
     actualizarPrecio();
 
@@ -113,24 +111,19 @@ document.querySelectorAll(".elegir").forEach(boton => {
   });
 });
 
-// CALCULADORA DE PRECIOS
-
-const edicion = document.getElementById("edicion");
-const cantidad = document.getElementById("cantidad");
-
-function obtenerCantidad() {
-  return Number(cantidad.value);
-}
+// CÁLCULO DEL PRECIO
 
 function cantidadValida() {
-  return Number.isInteger(obtenerCantidad()) &&
-    obtenerCantidad() >= 1 &&
-    obtenerCantidad() <= 5;
+  const numero = Number(cantidad.value);
+
+  return Number.isInteger(numero) &&
+    numero >= 1 &&
+    numero <= 5;
 }
 
 function actualizarPrecio() {
   const total = cantidadValida()
-    ? precios[edicion.value] * obtenerCantidad()
+    ? precios[edicion.value] * Number(cantidad.value)
     : 0;
 
   document.getElementById("precioTotal").textContent =
@@ -140,7 +133,9 @@ function actualizarPrecio() {
 edicion.addEventListener("change", actualizarPrecio);
 cantidad.addEventListener("input", actualizarPrecio);
 
-// AÑADIR PRODUCTOS AL CARRITO
+// AÑADIR AL CARRITO
+
+const ventanaCarrito = document.getElementById("carrito");
 
 document.getElementById("formReserva").addEventListener(
   "submit",
@@ -157,7 +152,7 @@ document.getElementById("formReserva").addEventListener(
       edicion: edicion.value,
       plataforma: document.getElementById("plataforma").value,
       formato: document.getElementById("formato").value,
-      cantidad: obtenerCantidad(),
+      cantidad: Number(cantidad.value),
       precio: precios[edicion.value]
     };
 
@@ -167,13 +162,11 @@ document.getElementById("formReserva").addEventListener(
       "Producto añadido al carrito de demostración.";
 
     actualizarCarrito();
-    document.getElementById("carrito").showModal();
+    ventanaCarrito.showModal();
   }
 );
 
-// MOSTRAR CARRITO
-
-const ventanaCarrito = document.getElementById("carrito");
+// ACTUALIZAR EL CARRITO
 
 function actualizarCarrito() {
   const contenedor = document.getElementById("productosCarrito");
@@ -229,6 +222,8 @@ function actualizarCarrito() {
     euros(total);
 }
 
+// ABRIR Y CERRAR EL CARRITO
+
 document.getElementById("abrirCarrito").addEventListener(
   "click",
   () => ventanaCarrito.showModal()
@@ -239,17 +234,20 @@ document.getElementById("cerrarCarrito").addEventListener(
   () => ventanaCarrito.close()
 );
 
+// VACIAR CARRITO
+
 document.getElementById("vaciarCarrito").addEventListener(
   "click",
   () => {
     carrito = [];
     actualizarCarrito();
+
     document.getElementById("mensajeCarrito").textContent =
       "Carrito vaciado.";
   }
 );
 
-// CONFIRMACIÓN DE DEMOSTRACIÓN
+// CONFIRMAR RESERVA SIMULADA
 
 document.getElementById("confirmarReserva").addEventListener(
   "click",
@@ -266,7 +264,7 @@ document.getElementById("confirmarReserva").addEventListener(
   }
 );
 
-// INICIALIZACIÓN
+// INICIAR LA PÁGINA
 
 actualizarPrecio();
 actualizarCarrito();
