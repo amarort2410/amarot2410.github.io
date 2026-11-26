@@ -1,143 +1,716 @@
+
 <!DOCTYPE html>
-
 <html lang="es">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Mi primera página web</title>
-
-    <link rel="stylesheet" href="style.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vortex Games presenta Vortex City, un videojuego conceptual de mundo abierto.">
+  <title>Vortex Games | Vortex City</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
-
 <body>
 
-    <header>
+<div class="aviso">VORTEX GAMES · TU CIUDAD, TU HISTORIA</div>
 
-        <h1> 2ª GD CFGB Informática de Oficina</h1>
+<header class="cabecera">
+  <a class="logo" href="#inicio">VORTEX <span>GAMES</span></a>
+  <button id="menuBtn" class="menu-btn" aria-label="Abrir menú">☰</button>
 
-        <p>Aprendiendo HTML y CSS</p>
+  <nav id="menu">
+    <a href="#inicio">Inicio</a>
+    <a href="#juego">El juego</a>
+    <a href="#mapa">Mapa</a>
+    <a href="#personajes">Personajes</a>
+    <a href="#garaje">Garaje</a>
+    <a href="#galeria">Galería</a>
+    <a href="#desafios">Desafíos</a>
+    <a href="#trofeos">Trofeos</a>
+    <a href="#operaciones">Operaciones</a>
+    <a href="#tienda">Tienda</a>
+  </nav>
 
-    </header>
+  <button class="btn btn-pequeño" id="abrirCarrito">
+    🛒 <span id="contador">0</span>
+  </button>
+</header>
 
-    <nav>
+<main>
 
-        <a href="#inicio">Inicio</a>
+<!-- PORTADA -->
+<section id="inicio" class="hero">
+  <div class="contenedor hero-contenido">
+    <p class="etiqueta">EL FUTURO DEL MUNDO ABIERTO</p>
+    <h1>VORTEX <span>CITY</span></h1>
+    <h3>TU CIUDAD. TU HISTORIA. TUS DECISIONES.</h3>
+    <p>Explora una metrópolis llena de posibilidades. Conduce, construye negocios, descubre secretos y decide cómo quieres vivir tu propia aventura.</p>
+    <div class="botones">
+      <a href="#juego" class="btn">DESCUBRIR EL JUEGO</a>
+      <a href="#tienda" class="btn btn-borde">VER EDICIONES</a>
+    </div>
+    <small>PC · PLAYSTATION · XBOX · CONCEPTO EN DESARROLLO</small>
+  </div>
+</section>
 
-        <a href="#sobre-mi">módulos del curso</a>
+<!-- PRESENTACIÓN -->
+<section id="juego" class="seccion">
+  <div class="contenedor">
+    <p class="etiqueta">01 / PRESENTACIÓN</p>
+    <h2>NO ES SOLO UN JUEGO. <span>ES TU MUNDO.</span></h2>
+    <p class="intro">Vortex City es el primer gran proyecto de Vortex Games, nuestra empresa ficticia de videojuegos. Queremos crear una alternativa a los grandes títulos de mundo abierto, como GTA V, apostando por la libertad, la personalización y una historia que evolucione según tus decisiones.</p>
+    <p>La idea es ofrecer una ciudad llena de vida, con diferentes barrios, playas, montañas, carreteras y zonas secretas. Cada jugador podrá elegir cómo explorar, qué actividades realizar y qué relaciones construir con los personajes.</p>
 
-        <a href="#contacto">Contacto</a>
+    <div class="grid tres">
+      <article class="tarjeta"><div class="emoji">🌆</div><h3>UN MUNDO ENORME</h3><p>Explora ciudades, pueblos, montañas, playas y lugares escondidos.</p></article>
+      <article class="tarjeta"><div class="emoji">🎭</div><h3>HISTORIA DINÁMICA</h3><p>Las decisiones pueden cambiar las relaciones y el desarrollo de las misiones.</p></article>
+      <article class="tarjeta"><div class="emoji">🎮</div><h3>LIBERTAD PARA JUGAR</h3><p>Conduce, participa en actividades, explora y crea tu propia aventura.</p></article>
+      <article class="tarjeta"><div class="emoji">🏡</div><h3>PROPIEDADES</h3><p>Imaginamos casas, apartamentos y negocios personalizables.</p></article>
+      <article class="tarjeta"><div class="emoji">🌦️</div><h3>CLIMA DINÁMICO</h3><p>Un mundo conceptual con cambios de tiempo y ciclos de día y noche.</p></article>
+      <article class="tarjeta"><div class="emoji">🤝</div><h3>VORTEX ONLINE</h3><p>Un futuro modo multijugador con eventos y actividades cooperativas.</p></article>
+    </div>
+  </div>
+</section>
 
-    </nav>
+<!-- ESTADÍSTICAS -->
+<section class="seccion fondo-alterno">
+  <div class="contenedor">
+    <p class="etiqueta">02 / EL UNIVERSO</p>
+    <h2>UNA CIUDAD. <span>INFINITAS POSIBILIDADES.</span></h2>
+    <div class="grid tres">
+      <div class="estadistica"><strong>6</strong><p>REGIONES CONCEPTUALES</p></div>
+      <div class="estadistica"><strong>3</strong><p>PROTAGONISTAS</p></div>
+      <div class="estadistica"><strong>∞</strong><p>AVENTURAS POR IMAGINAR</p></div>
+    </div>
+  </div>
+</section>
 
-    <main>
+<!-- MAPA -->
+<section id="mapa" class="seccion">
+  <div class="contenedor">
+    <p class="etiqueta">03 / EXPLORACIÓN</p>
+    <h2>DESCUBRE <span>VORTEX CITY.</span></h2>
+    <p>Selecciona una región para conocer los diferentes escenarios del videojuego.</p>
 
-        <section id="inicio" class="presentacion">
+    <div class="mapa-grid">
+      <div class="mapa-visual">
+        <button data-region="neon">🌆 Neon Core</button>
+        <button data-region="costa">🏖️ Costa Azul</button>
+        <button data-region="altos">⛰️ Los Altos</button>
+        <button data-region="puerto">🚢 Puerto Gris</button>
+        <button data-region="desierto">🏜️ Tierras Rojas</button>
+        <button data-region="bosque">🌲 Bosque Lúmina</button>
+      </div>
 
-        <img width=200
-    
-         src="aula informatica.png" alt="aula informatica.png">
+      <div class="tarjeta mapa-detalle">
+        <p class="etiqueta">LOCALIZACIÓN SELECCIONADA</p>
+        <h3 id="regionNombre">NEON CORE</h3>
+        <p id="regionTexto">El centro de Vortex City, lleno de rascacielos, luces, negocios y grandes avenidas.</p>
+        <p class="texto-secundario">Mapa conceptual interactivo.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
+<!-- ACTIVIDADES -->
+<section id="actividades" class="seccion fondo-alterno">
+  <div class="contenedor">
+    <p class="etiqueta">04 / ACTIVIDADES</p>
+    <h2>SIEMPRE HAY <span>ALGO QUE HACER.</span></h2>
+    <p>Queremos que Vortex City sea entretenido incluso cuando no estés siguiendo la historia principal.</p>
 
-        Estoy aprendiendo a crear páginas web con HTML y CSS.
+    <div class="grid cuatro">
+      <article class="tarjeta"><div class="emoji">🏎️</div><h3>Carreras</h3><p>Competiciones y personalización de vehículos.</p></article>
+      <article class="tarjeta"><div class="emoji">🏄</div><h3>Deportes</h3><p>Actividades acuáticas y desafíos deportivos.</p></article>
+      <article class="tarjeta"><div class="emoji">🏢</div><h3>Negocios</h3><p>Crea proyectos y desarrolla tu empresa virtual.</p></article>
+      <article class="tarjeta"><div class="emoji">🕵️</div><h3>Misterios</h3><p>Investiga pistas e historias ocultas.</p></article>
+      <article class="tarjeta"><div class="emoji">🎨</div><h3>Personalización</h3><p>Diseña vehículos, personajes y propiedades.</p></article>
+      <article class="tarjeta"><div class="emoji">🎡</div><h3>Eventos</h3><p>Festivales, espectáculos y actividades especiales.</p></article>
+      <article class="tarjeta"><div class="emoji">🗺️</div><h3>Exploración</h3><p>Descubre lugares sorprendentes por todo el mapa.</p></article>
+      <article class="tarjeta"><div class="emoji">🎮</div><h3>Minijuegos</h3><p>Pequeños desafíos repartidos por la ciudad.</p></article>
+    </div>
+  </div>
+</section>
 
-        <a href="https://sites.google.com/g.educaand.es/amarort2410/inicio"> <button>
-            <p>Descubrir más</p></button></a>
+<!-- PERSONAJES -->
+<section id="personajes" class="seccion">
+  <div class="contenedor">
+    <p class="etiqueta">05 / LA HISTORIA</p>
+    <h2>TRES VIDAS. <span>UNA CIUDAD.</span></h2>
+    <p>La historia de Vortex City gira alrededor de tres protagonistas con objetivos y personalidades diferentes.</p>
 
-
-        </section>
-
-        <section id="sobre-mi">
-
-            <h2>módulos del curso</h2>
-
-            <div class="tarjetas">
-
-                <article class="tarjeta">
-
-                    <h3>Comunicacion Y ciencias Sociales</h3>
-
-                    <p>• Lengua Castellana y Literatura: mejora de la comprensión lectora, expresión oral y escrita, ortografía y análisis de textos.
-• Lengua Extranjera (generalmente Inglés): iniciación profesional, vocabulario básico, estructuras gramaticales sencillas y comunicación oral/escrita básica.
-• Ciencias Sociales: conceptos de historia, geografía, integración europea, valores cívicos y constitucionales</p>
-
-                </article>
-
-                <article class="tarjeta">
-
-                    <h3>ofimatica y archivo de documentos</h3>
-
-                    <p>• Manejo del sistema operativo: Utilización de las herramientas básicas del entorno de usuario y gestión de dispositivos de almacenamiento.
-• Procesadores de texto y hojas de cálculo: Creación, edición, formato e impresión de documentos y tablas, con práctica de mecanografía (escritura al tacto con rapidez y exactitud).
-• Presentaciones y correo electrónico: Elaboración de presentaciones multimedia y gestión de comunicaciones internas y externas por vía digital.
-• Archivo de documentos: Clasificación, registro y custodia de la información tanto en soporte digital (carpetas, formatos como PDF, DOCX) como en soporte convencional (papel, archivadores, reprografía y encuadernación básica).
-• Seguridad y confidencialidad: Aplicación de normas básicas para proteger los datos y garantizar la integridad de la información en el entorno laboral</p>
-
-                </article>
-
-                <article class="tarjeta">
-
-                    <h3>Instalacion y mantenimiento de redes para transmision de datos</h3>
-
-                    <p>• Infraestructuras y canalizaciones: Montaje de canaletas, soportes, armarios de distribución y elementos físicos en planos.
-• Cableado estructurado y redes de datos: Instalación de cables de pares trenzados (categorías Cat. 6, 6A, 7, etc.) y redes inalámbricas (Wi-Fi).
-• Dispositivos de interconexión: Configuración básica de switches (conmutadores) y routers (enrutadores).
-• Configuración lógica: Ajuste de adaptadores de red en distintos sistemas operativos (como Windows, Ubuntu o macOS).
-• Mantenimiento y resolución de averías: Diagnóstico y tipologías de mantenimiento (preventivo, predictivo y correctivo) frente a fallos en el cableado o la conexión</p>
-
-                </article>
-  <div class="tarjetas">
-
-                <article class="tarjeta">
-        <H3>Ciencias Aplicadas II</H3>
-           <P></P> Matemáticas y Árgebra:
-	• Resolución de ecuaciones de primer y segundo grado y sistemas de ecuaciones.
-	• Monomios, polinomios, identidades notables, raíces y factorización.
-	• Geometría plana, teoremas fundamentales (como semejanza) y geometría del espacio.
-• Ciencias y Naturaleza:
-	• Explicación de fenómenos naturales a partir de leyes y teorías científicas.
-	• Aplicación práctica de conceptos físicos, químicos o biológicos vinculados al entorno cotidiano y profesional.
-
-Recursos y Materiales
-
-</P>   
-   </article>
-
-                <article class="tarjeta"> 
-
-<h3>Proyecto intermodular</h3>
-
-
-<p>• Metodología: Se basa en metodologías activas, destacando el Aprendizaje Basado en Retos (ABR) o proyectos prácticos reales adaptados al nivel del alumnado.
-• Enfoque: Conecta los conocimientos de todos los módulos del ciclo formativo (ámbitos y módulos profesionales), con énfasis en la búsqueda de información, la innovación, la digitalización, la sostenibilidad y el emprendimiento.
-• Desarrollo y defensa: Se suele realizar en grupo y requiere una exposición o defensa final ante el equipo docente.</p>
-
+    <div class="grid tres">
+      <article class="tarjeta personaje"><div class="numero-personaje">01</div><h3>ALEX VEGA</h3><p>Un apasionado de los vehículos que llega a la ciudad buscando nuevas oportunidades.</p></article>
+      <article class="tarjeta personaje"><div class="numero-personaje">02</div><h3>NORA CRUZ</h3><p>Experta en tecnología e investigación, siempre preparada para descubrir secretos.</p></article>
+      <article class="tarjeta personaje"><div class="numero-personaje">03</div><h3>LEO RIVAS</h3><p>Un emprendedor ambicioso que quiere construir un gran negocio en Vortex City.</p></article>
     </div>
 
+    <div class="tarjeta historia">
+      <p class="etiqueta">MINIJUEGO DE DECISIONES</p>
+      <h3>¿QUÉ HARÍAS TÚ?</h3>
+      <p>Encuentras una mochila perdida que contiene información importante. ¿Qué decides hacer?</p>
+      <div class="botones">
+        <button class="btn decision" data-decision="devolver">BUSCAR AL DUEÑO</button>
+        <button class="btn decision" data-decision="investigar">INVESTIGAR</button>
+        <button class="btn decision" data-decision="ignorar">CONTINUAR TU CAMINO</button>
+      </div>
+      <p id="resultadoHistoria" class="resultado" role="status">Selecciona una decisión.</p>
+    </div>
+  </div>
+</section>
 
+<!-- GARAJE -->
+<section id="garaje" class="seccion fondo-alterno">
+  <div class="contenedor">
+    <p class="etiqueta">06 / VORTEX MOTORSPORT</p>
+    <h2>TU GARAJE. <span>TUS REGLAS.</span></h2>
+    <p>Descubre vehículos conceptuales y consulta sus características.</p>
 
-        </section>
+    <div class="grid dos">
+      <div class="tarjeta coche-vista">
+        <div id="cocheIcono" class="coche-icono">🏎️</div>
+        <h3 id="cocheNombre">PHANTOM GT</h3>
+        <p id="cocheTipo">Deportivo de alto rendimiento</p>
+        <div id="cochePintura" class="pintura"></div>
+      </div>
 
-        <section id="contacto">
+      <div class="tarjeta">
+        <h3>ELIGE UN VEHÍCULO</h3>
+        <div class="grid dos botones-coches">
+          <button class="opcion-coche activo" data-coche="phantom">🏎️ Phantom GT</button>
+          <button class="opcion-coche" data-coche="titan">🚙 Titan X</button>
+          <button class="opcion-coche" data-coche="volt">⚡ Volt R</button>
+          <button class="opcion-coche" data-coche="retro">🚗 Retro 88</button>
+        </div>
 
-            <h2>Contacto</h2>
+        <div class="estadisticas-coche">
+          <label>Velocidad <span id="velocidadValor">95</span>/100</label>
+          <div class="barra"><div id="velocidadBarra" style="width:95%"></div></div>
+          <label>Manejo <span id="manejoValor">82</span>/100</label>
+          <div class="barra"><div id="manejoBarra" style="width:82%"></div></div>
+          <label>Resistencia <span id="resistenciaValor">60</span>/100</label>
+          <div class="barra"><div id="resistenciaBarra" style="width:60%"></div></div>
+        </div>
 
-         <p>Correo:amarort2410@g.educaand.es</p>
+        <h3>COLOR DEL VEHÍCULO</h3>
+        <div class="colores">
+          <button data-color="#ad69ff" style="background:#ad69ff" aria-label="Morado"></button>
+          <button data-color="#ef4444" style="background:#ef4444" aria-label="Rojo"></button>
+          <button data-color="#38bdf8" style="background:#38bdf8" aria-label="Azul"></button>
+          <button data-color="#22c55e" style="background:#22c55e" aria-label="Verde"></button>
+          <button data-color="#f8fafc" style="background:#f8fafc" aria-label="Blanco"></button>
+        </div>
+        <p id="cocheMensaje" role="status">Personaliza tu coche favorito.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        </section>
+<!-- CREADOR DE PERSONAJE -->
+<section id="identidad" class="seccion">
+  <div class="contenedor">
+    <p class="etiqueta">07 / IDENTIDAD VORTEX</p>
+    <h2>CREA TU <span>PERSONAJE.</span></h2>
+    <p>Personaliza una identidad ficticia y genera tu tarjeta de ciudadano.</p>
 
-    </main>
+    <div class="grid dos">
+      <form id="formPersonaje" class="tarjeta formulario">
+        <label for="alias">Nombre del jugador</label>
+        <input id="alias" maxlength="24" placeholder="Ejemplo: ShadowVortex">
 
-    <footer>
+        <label for="profesion">Profesión</label>
+        <select id="profesion">
+          <option>Piloto profesional</option>
+          <option>Empresario</option>
+          <option>Explorador</option>
+          <option>Investigador</option>
+        </select>
 
-        <p>© 2026 Mi primera página web</p>
+        <label for="estilo">Estilo</label>
+        <select id="estilo">
+          <option>Urbano</option>
+          <option>Deportivo</option>
+          <option>Elegante</option>
+          <option>Aventurero</option>
+        </select>
 
-    </footer>
+        <button class="btn" type="submit">CREAR IDENTIDAD</button>
+      </form>
+
+      <div class="carnet">
+        <small>VORTEX CITY / CITIZEN CARD</small>
+        <div class="avatar">👤</div>
+        <h3 id="carnetNombre">TU PERSONAJE</h3>
+        <p id="carnetProfesion">PROFESIÓN SIN SELECCIONAR</p>
+        <p id="carnetEstilo">ESTILO SIN SELECCIONAR</p>
+        <small>IDENTIDAD FICTICIA · DEMOSTRACIÓN</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- REPUTACIÓN -->
+<section id="reputacion" class="seccion fondo-alterno">
+  <div class="contenedor">
+    <p class="etiqueta">08 / DECISIONES</p>
+    <h2>CONSTRUYE TU <span>REPUTACIÓN.</span></h2>
+    <p>Prueba cómo las acciones podrían influir en la reputación de tu personaje.</p>
+
+    <div class="tarjeta reputacion-panel">
+      <strong id="reputacionNumero" class="numero-grande">50</strong>
+      <div class="barra"><div id="reputacionBarra" style="width:50%"></div></div>
+      <h3 id="reputacionEstado">CIUDADANO DESCONOCIDO</h3>
+
+      <div class="grid dos">
+        <button class="opcion-coche accion" data-puntos="15">🤝 Ayudar a un vecino</button>
+        <button class="opcion-coche accion" data-puntos="10">🌳 Mejorar el barrio</button>
+        <button class="opcion-coche accion" data-puntos="-10">🏁 Incumplir las reglas de una carrera</button>
+        <button class="opcion-coche accion" data-puntos="20">🕵️ Resolver un misterio</button>
+      </div>
+
+      <button id="reiniciarReputacion" class="btn btn-borde">REINICIAR</button>
+      <p id="mensajeReputacion" role="status">Selecciona una acción.</p>
+    </div>
+  </div>
+</section>
+
+<!-- VORTEX PHONE -->
+<section id="telefono" class="seccion">
+  <div class="contenedor">
+    <p class="etiqueta">09 / TECNOLOGÍA</p>
+    <h2>VORTEX <span>PHONE.</span></h2>
+    <p>Un prototipo del móvil que imaginamos para el videojuego.</p>
+
+    <div class="movil">
+      <div class="movil-superior"><span>VORTEX OS</span><span>●●● ▰</span></div>
+      <div id="horaMovil" class="hora-movil">12:00</div>
+      <p class="movil-subtitulo">Bienvenido a Vortex City</p>
+
+      <div class="apps">
+        <button data-app="misiones">🎯<small>Misiones</small></button>
+        <button data-app="mensajes">💬<small>Mensajes</small></button>
+        <button data-app="banco">💳<small>V-Bank</small></button>
+        <button data-app="mapa">🗺️<small>Mapa</small></button>
+      </div>
+
+      <div class="pantalla-app">
+        <h3 id="appTitulo">VORTEX OS</h3>
+        <p id="appTexto">Selecciona una aplicación.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALERÍA -->
+<section id="galeria" class="seccion fondo-alterno">
+  <div class="contenedor">
+    <p class="etiqueta">10 / GALERÍA</p>
+    <h2>UN MUNDO QUE <span>IMPRESIONA.</span></h2>
+    <p>Fotografías de referencia. No son imágenes reales del videojuego.</p>
+
+    <div class="grid dos galeria-grid">
+      <button class="foto" data-titulo="NEON CORE">
+        <img src="https://images.unsplash.com/photo-1519501025264-65ba15a82390?w=900&auto=format&fit=crop" alt="Ciudad nocturna" loading="lazy">
+        <span>NEON CORE</span>
+      </button>
+
+      <button class="foto" data-titulo="VORTEX NIGHTS">
+        <img src="https://images.unsplash.com/photo-1519608487953-e999c86e7455?w=900&auto=format&fit=crop" alt="Luces de la ciudad" loading="lazy">
+        <span>VORTEX NIGHTS</span>
+      </button>
+
+      <button class="foto" data-titulo="LOS ALTOS">
+        <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=900&auto=format&fit=crop" alt="Montañas" loading="lazy">
+        <span>LOS ALTOS</span>
+      </button>
+
+      <button class="foto" data-titulo="NATURALEZA">
+        <img src="https://images.unsplash.com/photo-1500534623283-312aade485b7?w=900&auto=format&fit=crop" alt="Paisaje natural" loading="lazy">
+        <span>FUERA DE LA CIUDAD</span>
+      </button>
+    </div>
+  </div>
+</section>
+
+<!-- DESAFÍOS -->
+<section id="desafios" class="seccion">
+  <div class="contenedor">
+    <p class="etiqueta">11 / DESAFÍOS</p>
+    <h2>CONVIÉRTETE EN <span>EXPLORADOR.</span></h2>
+    <p>Marca las actividades que hayas probado en esta web.</p>
+
+    <div class="grid dos">
+      <label class="reto"><input class="reto-check" type="checkbox"> Explorar el mapa</label>
+      <label class="reto"><input class="reto-check" type="checkbox"> Elegir un vehículo</label>
+      <label class="reto"><input class="reto-check" type="checkbox"> Crear un personaje</label>
+      <label class="reto"><input class="reto-check" type="checkbox"> Probar el móvil Vortex</label>
+      <label class="reto"><input class="reto-check" type="checkbox"> Visitar la galería</label>
+      <label class="reto"><input class="reto-check" type="checkbox"> Consultar las ediciones</label>
+    </div>
+
+    <div class="tarjeta progreso-panel">
+      <h3>TU PROGRESO</h3>
+      <div class="barra"><div id="barraRetos" style="width:0%"></div></div>
+      <p id="textoRetos">0 de 6 desafíos completados</p>
+      <button id="reiniciarRetos" class="btn btn-borde">REINICIAR DESAFÍOS</button>
+    </div>
+  </div>
+</section>
+
+<!-- TROFEOS -->
+<section id="trofeos" class="seccion fondo-alterno">
+  <div class="contenedor">
+    <p class="etiqueta">12 / PROGRESO DEL JUGADOR</p>
+    <h2>SUBE DE NIVEL. <span>CONSIGUE TROFEOS.</span></h2>
+    <p>Completa desafíos para ganar experiencia y desbloquear insignias.</p>
+
+    <div class="tarjeta nivel-panel">
+      <div class="nivel-cabecera">
+        <div>
+          <small>PERFIL DE JUGADOR</small>
+          <h3 id="nivelNombre">NOVATO VORTEX</h3>
+        </div>
+        <strong id="nivelNumero">NIVEL 1</strong>
+      </div>
+
+      <div class="experiencia-info">
+        <span>EXPERIENCIA</span>
+        <strong id="xpTexto">0 / 100 XP</strong>
+      </div>
+
+      <div class="barra"><div id="barraXP" style="width:0%"></div></div>
+      <p id="nivelMensaje" role="status">Completa desafíos para conseguir experiencia.</p>
+    </div>
+
+    <div class="grid tres trofeos-grid">
+      <article class="tarjeta trofeo" id="trofeoPrimero">
+        <div class="trofeo-icono">🔒</div>
+        <h3>PRIMEROS PASOS</h3>
+        <p>Completa 1 desafío.</p>
+        <span class="trofeo-estado">BLOQUEADO</span>
+      </article>
+
+      <article class="tarjeta trofeo" id="trofeoExplorador">
+        <div class="trofeo-icono">🔒</div>
+        <h3>EXPLORADOR</h3>
+        <p>Completa 3 desafíos.</p>
+        <span class="trofeo-estado">BLOQUEADO</span>
+      </article>
+
+      <article class="tarjeta trofeo" id="trofeoLeyenda">
+        <div class="trofeo-icono">🔒</div>
+        <h3>LEYENDA VORTEX</h3>
+        <p>Completa los 6 desafíos.</p>
+        <span class="trofeo-estado">BLOQUEADO</span>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- DESARROLLO -->
+<section id="desarrollo" class="seccion fondo-alterno">
+  <div class="contenedor">
+    <p class="etiqueta">14 / DETRÁS DEL PROYECTO</p>
+    <h2>ASÍ NACE <span>VORTEX CITY.</span></h2>
+    <p>Estas son las fases que seguiría nuestra empresa para convertir el concepto en un videojuego real.</p>
+
+    <div class="timeline">
+      <article><strong>01</strong><div><h3>IDEA Y PLANIFICACIÓN</h3><p>Definimos el universo, la historia, los protagonistas y las mecánicas principales.</p></div></article>
+      <article><strong>02</strong><div><h3>DISEÑO DEL MUNDO</h3><p>Planificamos barrios, carreteras, edificios, paisajes y zonas de exploración.</p></div></article>
+      <article><strong>03</strong><div><h3>PROGRAMACIÓN</h3><p>Desarrollamos los controles, vehículos, personajes y sistemas interactivos.</p></div></article>
+      <article><strong>04</strong><div><h3>PRUEBAS</h3><p>Revisamos errores y mejoramos la experiencia de juego.</p></div></article>
+      <article><strong>05</strong><div><h3>LANZAMIENTO</h3><p>Presentamos el videojuego cuando esté preparado para publicarse.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<!-- CONFIGURADOR -->
+<section id="configurador" class="seccion">
+  <div class="contenedor">
+    <p class="etiqueta">15 / TU AVENTURA</p>
+    <h2>DESCUBRE TU <span>ESTILO DE JUEGO.</span></h2>
+    <p>Selecciona tus preferencias para descubrir tu experiencia ideal.</p>
+
+    <div class="tarjeta configurador formulario">
+      <label for="tipoJugador">¿Cómo prefieres jugar?</label>
+      <select id="tipoJugador">
+        <option value="explorador">Explorar lugares</option>
+        <option value="piloto">Conducir y competir</option>
+        <option value="empresario">Crear negocios</option>
+        <option value="aventurero">Vivir historias</option>
+      </select>
+
+      <label for="zonaJugador">¿Qué paisaje te gusta más?</label>
+      <select id="zonaJugador">
+        <option value="ciudad">La gran ciudad</option>
+        <option value="playa">La playa</option>
+        <option value="montana">La montaña</option>
+        <option value="desierto">El desierto</option>
+      </select>
+
+      <button id="descubrirAventura" class="btn">DESCUBRIR MI AVENTURA</button>
+      <p id="resultadoAventura" class="resultado" role="status">Elige tus preferencias.</p>
+    </div>
+  </div>
+</section>
+
+<!-- COMUNIDAD -->
+<section id="comunidad" class="seccion fondo-alterno">
+  <div class="contenedor">
+    <p class="etiqueta">16 / COMUNIDAD</p>
+    <h2>EL FUTURO LO <span>IMAGINAMOS JUNTOS.</span></h2>
+    <p>Queremos que los jugadores aporten ideas sobre nuevas actividades, vehículos y lugares.</p>
+
+    <div class="tarjeta encuesta">
+      <h3>¿QUÉ TE GUSTARÍA VER EN VORTEX CITY?</h3>
+      <div class="grid dos">
+        <button class="opcion-coche voto" data-voto="coches">🚗 Más vehículos</button>
+        <button class="opcion-coche voto" data-voto="misiones">🎯 Más misiones</button>
+        <button class="opcion-coche voto" data-voto="mapa">🌍 Un mapa más grande</button>
+        <button class="opcion-coche voto" data-voto="online">🎮 Más actividades online</button>
+      </div>
+      <p id="mensajeVoto" role="status">Selecciona tu opción favorita.</p>
+      <small>Encuesta local de demostración. No se envían votos.</small>
+    </div>
+  </div>
+</section>
+
+<!-- TIENDA -->
+<section id="tienda" class="seccion">
+  <div class="contenedor">
+    <p class="etiqueta">17 / TIENDA VORTEX</p>
+    <h2>ELIGE TU <span>EDICIÓN.</span></h2>
+    <p>Precios ficticios utilizados para presentar el proyecto empresarial.</p>
+
+    <div class="grid tres">
+      <article class="tarjeta edicion">
+        <h3>STANDARD</h3>
+        <div class="precio">59,99 €</div>
+        <p>✔ Juego base conceptual</p>
+        <p>✔ Historia principal</p>
+        <p>✔ Exploración del mundo abierto</p>
+        <button class="btn elegir-edicion" data-edicion="standard">SELECCIONAR</button>
+      </article>
+
+      <article class="tarjeta edicion destacada">
+        <p class="etiqueta">MÁS POPULAR</p>
+        <h3>DELUXE</h3>
+        <div class="precio">79,99 €</div>
+        <p>✔ Contenido Standard</p>
+        <p>✔ Extras digitales propuestos</p>
+        <p>✔ Personalización adicional</p>
+        <button class="btn elegir-edicion" data-edicion="deluxe">SELECCIONAR</button>
+      </article>
+
+      <article class="tarjeta edicion">
+        <h3>ULTIMATE</h3>
+        <div class="precio">99,99 €</div>
+        <p>✔ Contenido Deluxe</p>
+        <p>✔ Más extras conceptuales</p>
+        <p>✔ Contenido especial propuesto</p>
+        <button class="btn elegir-edicion" data-edicion="ultimate">SELECCIONAR</button>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- RESERVAS -->
+<section id="reservas" class="seccion fondo-alterno">
+  <div class="contenedor">
+    <p class="etiqueta">18 / RESERVAS</p>
+    <h2>PREPARA TU <span>RESERVA.</span></h2>
+    <p>Configura una compra de demostración y añádela al carrito. No se realizan pagos ni reservas reales.</p>
+
+    <form id="formReserva" class="tarjeta formulario reserva-form">
+      <label for="edicion">Edición</label>
+      <select id="edicion">
+        <option value="standard">Standard — 59,99 €</option>
+        <option value="deluxe">Deluxe — 79,99 €</option>
+        <option value="ultimate">Ultimate — 99,99 €</option>
+      </select>
+
+      <label for="plataforma">Plataforma</label>
+      <select id="plataforma">
+        <option>PC</option>
+        <option>PlayStation</option>
+        <option>Xbox</option>
+      </select>
+
+      <label for="formato">Formato</label>
+      <select id="formato">
+        <option>Digital</option>
+        <option>Físico</option>
+      </select>
+
+      <label for="cantidad">Cantidad</label>
+      <input id="cantidad" type="number" min="1" max="5" value="1" required>
+
+      <div class="total">
+        <span>Precio total</span>
+        <strong id="precioTotal">59,99 €</strong>
+      </div>
+
+      <button class="btn" type="submit">AÑADIR AL CARRITO</button>
+      <p id="mensajeReserva" role="status"></p>
+      <small>Demostración educativa, sin pagos reales.</small>
+    </form>
+  </div>
+</section>
+
+<!-- OPERACIONES -->
+<section id="operaciones" class="seccion fondo-alterno">
+  <div class="contenedor">
+    <p class="etiqueta">CENTRO DE CONTROL / VORTEX CITY</p>
+    <h2>CENTRO DE <span>OPERACIONES.</span></h2>
+    <p>Consulta el estado ficticio de la ciudad y genera una misión aleatoria.</p>
+
+    <div class="grid dos operaciones-grid">
+      <article class="tarjeta panel-operaciones">
+        <div class="operaciones-cabecera">
+          <h3>🌐 ESTADO DE LA CIUDAD</h3>
+          <span class="estado-online">● ONLINE</span>
+        </div>
+
+        <div class="datos-ciudad">
+          <div><small>CLIMA</small><strong id="climaCiudad">Despejado</strong></div>
+          <div><small>TEMPERATURA</small><strong id="temperaturaCiudad">24 °C</strong></div>
+          <div><small>ACTIVIDAD</small><strong id="actividadCiudad">Alta</strong></div>
+          <div><small>TRÁFICO</small><strong id="traficoCiudad">Moderado</strong></div>
+        </div>
+
+        <button id="actualizarCiudad" class="btn btn-borde">ACTUALIZAR INFORME</button>
+        <p id="mensajeCiudad" role="status">Informe de simulación de Vortex City.</p>
+      </article>
+
+      <article class="tarjeta panel-operaciones">
+        <div class="operaciones-cabecera">
+          <h3>🎯 GENERADOR DE MISIONES</h3>
+          <span class="pill-operacion">ALEATORIO</span>
+        </div>
+
+        <div class="mision-icono" id="misionIcono">🗺️</div>
+        <h3 id="misionTitulo">RUTA DESCONOCIDA</h3>
+        <p id="misionDescripcion">Pulsa el botón para recibir una nueva misión.</p>
+        <div class="mision-meta">
+          <span id="misionZona">Zona: por determinar</span>
+          <span id="misionRecompensa">Recompensa: — XP</span>
+        </div>
+        <button id="generarMision" class="btn">GENERAR MISIÓN</button>
+        <p id="mensajeMision" role="status"></p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- NOTICIAS -->
+<section id="noticias" class="seccion">
+  <div class="contenedor">
+    <p class="etiqueta">20 / ACTUALIZACIONES DEL PROYECTO</p>
+    <h2>ÚLTIMAS <span>NOVEDADES.</span></h2>
+
+    <div class="grid tres">
+      <article class="tarjeta">
+        <p class="etiqueta">MUNDO ABIERTO</p>
+        <h3>SEIS REGIONES POR DESCUBRIR</h3>
+        <p>Conoce los escenarios que forman el universo conceptual de Vortex City.</p>
+        <a href="#mapa" class="enlace">EXPLORAR →</a>
+      </article>
+
+      <article class="tarjeta">
+        <p class="etiqueta">PERSONAJES</p>
+        <h3>TRES HISTORIAS DIFERENTES</h3>
+        <p>Alex, Nora y Leo protagonizan nuestra propuesta de aventura.</p>
+        <a href="#personajes" class="enlace">CONOCER →</a>
+      </article>
+
+      <article class="tarjeta">
+        <p class="etiqueta">VEHÍCULOS</p>
+        <h3>DESCUBRE VORTEX MOTORSPORT</h3>
+        <p>Explora el garaje y personaliza coches de demostración.</p>
+        <a href="#garaje" class="enlace">VISITAR →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- PREGUNTAS -->
+<section id="preguntas" class="seccion fondo-alterno">
+  <div class="contenedor">
+    <p class="etiqueta">21 / AYUDA</p>
+    <h2>PREGUNTAS <span>FRECUENTES.</span></h2>
+
+    <details>
+      <summary>¿Qué es Vortex Games?</summary>
+      <p>Es una empresa ficticia de desarrollo de videojuegos creada para un proyecto educativo.</p>
+    </details>
+
+    <details>
+      <summary>¿Cuándo se lanzará Vortex City?</summary>
+      <p>No existe una fecha real de lanzamiento. El videojuego es una propuesta conceptual.</p>
+    </details>
+
+    <details>
+      <summary>¿Puedo comprar o reservar el juego?</summary>
+      <p>No. Los precios, las ediciones y el carrito son demostraciones.</p>
+    </details>
+
+    <details>
+      <summary>¿En qué plataformas estaría disponible?</summary>
+      <p>La propuesta contempla PC, PlayStation y Xbox.</p>
+    </details>
+
+    <details>
+      <summary>¿Funciona esta web en móviles?</summary>
+      <p>La página está diseñada para adaptarse a diferentes tamaños de pantalla.</p>
+    </details>
+  </div>
+</section>
+
+</main>
+
+<!-- PIE DE PÁGINA -->
+<footer>
+  <div class="contenedor">
+    <h2>VORTEX <span>GAMES</span></h2>
+    <p>BEYOND THE GAME</p>
+    <p>Diseñamos mundos. Imaginamos historias. Creamos experiencias.</p>
+    <small>© 2026 Vortex Games · Proyecto educativo ficticio.</small>
+    <p><a href="#inicio">VOLVER AL INICIO ↑</a></p>
+  </div>
+</footer>
+
+<!-- CARRITO -->
+<dialog id="carrito" class="ventana">
+  <div class="ventana-cabecera">
+    <h3>🛒 TU CARRITO</h3>
+    <button id="cerrarCarrito" aria-label="Cerrar carrito">✕</button>
+  </div>
+
+  <div id="listaCarrito"></div>
+
+  <div class="total">
+    <span>Total</span>
+    <strong id="totalCarrito">0,00 €</strong>
+  </div>
+
+  <div class="botones">
+    <button id="vaciarCarrito" class="btn btn-borde">VACIAR</button>
+    <button id="confirmarReserva" class="btn">SIMULAR RESERVA</button>
+  </div>
+
+  <p id="mensajeCarrito" role="status"></p>
+  <small>Esta tienda no realiza compras ni pagos reales.</small>
+</dialog>
+
+<!-- VISOR DE IMÁGENES -->
+<dialog id="visor" class="ventana visor">
+  <button id="cerrarVisor" class="cerrar-visor" aria-label="Cerrar imagen">✕</button>
+  <img id="imagenVisor" alt="Imagen ampliada">
+  <p id="tituloVisor"></p>
+</dialog>
+
+<button id="volverArriba" aria-label="Volver arriba">↑</button>
 
 </body>
-
 </html>
+
+
